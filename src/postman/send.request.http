@@ -1,0 +1,28 @@
+@url_admin=http://localhost:8001
+@url_client=http://localhost:8000
+
+
+###
+GET {{url_admin}}/services
+
+###
+GET {{url_client}}/brand/new
+# DELETE {{url_admin}}/services/brand_management_service
+
+###
+# POST {{url_admin}}/services
+# Content-Type: application/json
+
+# {
+#     "name": "brand_management_service",
+#     "host": "localhost:4004",
+# }
+
+
+###
+PATCH {{url_admin}}/services/brand_management_service
+Content-Type: application/json
+
+{
+    "port": 3000
+}
